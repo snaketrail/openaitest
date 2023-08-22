@@ -39,11 +39,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-    function changeContent(url, button) {
-        var iframe = document.getElementById('content-iframe');
-        iframe.src = url;
-    
-        var buttons = document.querySelectorAll('.button');
-        buttons.forEach(btn => btn.classList.remove('selected'));
-        button.classList.add('selected');
-    }
+function changeContent(url, button) {
+  var iframe = document.getElementById('content-iframe');
+  iframe.src = url;
+  
+  var buttons = document.querySelectorAll('.button');
+  buttons.forEach(btn => btn.classList.remove('selected'));
+  button.classList.add('selected');
+  }

@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="stylesheet.css" rel="stylesheet">
-    <title>Document</title>
+    <title>SimDim Marketing</title>
 </head>
 <body>
     <nav>
         <p class="logo" onclick="goToHome()">SimDim Marketing</p>
         <ul class="menu">
-            <li><a href="index.html" class="active">Начало</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="portfolio.html">Портфолио</a></li>
-            <li><a href="about.html">За нас</a></li>
-            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="index.html" class="active">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contacts</a></li>
         </ul>
         <a href="#" class="menu-toggle">
             <div class="icon">☰</div>
         </a>
     </nav>
     <div id="container">
-        <div id="iframe-container">
-          <iframe id="content-iframe" src="initial.html" width="300" height="200"></iframe>
-        </div>
-        <div id="button-container">
-          <div class="button" onclick="changeContent('content1.html', this)">Button 1</div>
-          <div class="button" onclick="changeContent('content2.html', this)">Button 2</div>
-          <div class="button" onclick="changeContent('content3.html', this)">Button 3</div>
-          <div class="button" onclick="changeContent('content4.html', this)">Button 4</div>
-          <div class="button" onclick="changeContent('content5.html', this)">Button 5</div>
-          <div class="button" onclick="changeContent('content6.html', this)">Button 6</div>
-        </div>
+      <div id="iframe-container">
+        <iframe id="content-iframe" src="initial.html"></iframe>
       </div>
+      <div id="button-container">
+        <div class="button" onclick="changeContent('content1.html', this)">Website Design</div>
+        <div class="button" onclick="changeContent('contentMain/content2.html', this)">Copywriting</div>
+        <div class="button" onclick="changeContent('contentMain/content3.html', this)">Graphic Design</div>
+        <div class="button" onclick="changeContent('contentMain/content4.html', this)">SEO Audit</div>
+        <div class="button" onclick="changeContent('contentMain/content5.html', this)">Virtual Assistance</div>
+        <div class="button" onclick="changeContent('contentMain/content6.html', this)">Business Automation</div>
+      </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
