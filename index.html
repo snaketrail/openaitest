@@ -20,18 +20,22 @@
         </a>
     </nav>
     <div id="container">
-      <div id="iframe-container">
-        <iframe id="content-iframe" src="initial.html"></iframe>
-      </div>
       <div id="button-container">
-        <div class="button" onclick="changeContent('content1.html', this)">Website Design</div>
-        <div class="button" onclick="changeContent('contentMain/content2.html', this)">Copywriting</div>
-        <div class="button" onclick="changeContent('contentMain/content3.html', this)">Graphic Design</div>
-        <div class="button" onclick="changeContent('contentMain/content4.html', this)">SEO Audit</div>
-        <div class="button" onclick="changeContent('contentMain/content5.html', this)">Virtual Assistance</div>
-        <div class="button" onclick="changeContent('contentMain/content6.html', this)">Business Automation</div>
+          <div class="button" onclick="buttonHome1()">Website Design</div>
+          <div class="button" onclick="buttonHome2()">Copywriting</div>
+          <div class="button" onclick="buttonHome3()">Graphic Design</div>
+          <div class="button" onclick="buttonHome4()">SEO Audit</div>
+          <div class="button" onclick="buttonHome5()">Virtual Assistance</div>
+          <div class="button" onclick="buttonHome6()">Business Automation</div>
       </div>
-    </div>
+      <div id="nextContainer">
+          <div id="itemContainer">
+              <h2 id="itemTitle"></h2>
+              <p id="itemText"></p>
+              <img id="itemImage" src="images/SimDim.png" alt="logo">
+          </div>
+      </div>
+  </div>
     <script src="script.js"></script>
 </body>
 </html>

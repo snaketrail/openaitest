@@ -13,6 +13,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    border-bottom: #000000 3px solid;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9) inset;
   }
   
   .logo {
@@ -146,77 +148,57 @@ body {
     }
   }
 
-
-
-#container {
-  margin-top: 50px;
-  display: flex;
-  width: 100%; /* Take the whole width of the page */
-  min-height: 600px;
-  z-index: 999;
-}
-
-@media screen and (max-width: 768px) {
-  #iframe-container {
-    width: 79%;
-    position: relative;
-    overflow: hidden; /* Hide iframe scrollbars */
-    margin-top: 150px; /* Adjust this value to leave space for the menu */
-  }
-}
-
-#iframe-container {
-  width: 79%;
-  position: relative;
-  overflow: hidden; /* Hide iframe scrollbars */
-}
-
-#content-iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-
-#button-container {
-  width: 21%; /* 19% + 2% for the border */
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-#button-container {
-  width: 21%; /* 19% + 2% for the border */
-  background-color: #f1f1f1;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-.button-container {
-  width: 100%; /* Set the button container width to 100% */
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Align content to the center */
-  padding: 10px; /* Adjust padding for larger text */
-  cursor: pointer;
-  border-left: 5px solid transparent;
-  transition: border-color 0.3s;
-  flex-grow: 1; /* Expand to fill available space */
-  font-size: 18px; /* Adjust font size as needed */
-}
-
-.button:hover{
-  background-color: #d74545;
-}
-
-.button.selected {
-  border-left-color: #d74545; /* Show border on the selected button */
-}
-@media screen and (min-width: 1200px) {
   #container {
-    min-height: 600px; /* Adjust the minimum height for larger screens */
+    margin-top: 25px;
+    display: flex;
+    min-height: 600px;
+    border: 2px solid #333; /* Add border to the container */
+    background-color: #f1f1f1; /* Set background color */
+    border-top: none;
   }
-}
+  
+  /* Style the content section */
+  #nextContainer {
+    flex: 1; /* Occupy 80% of the available width */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #ffffff; /* Set background color */
+    border-right: 2px solid #333; /* Add a right border */
+  }
+  
+  /* Style the item container */
+  #itemContainer {
+    text-align: center;
+  }
+  
+  /* Style the buttons section */
+  #button-container {
+    width: 20%; /* Fixed width for the button container */
+    display: flex;
+    flex-direction: column;
+    background-color: #333; /* Set background color */
+    padding: 10px;
+    order: 2; /* Change the order to appear on the right */
+  }
+  
+  /* Style individual buttons */
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 5px; /* Add margin between buttons */
+    flex-grow: 1; /* Make buttons fill the available height */
+    border: #d74545 solid 1px;
+  }
+  .button:hover{
+    box-shadow: -5px 0 5px #d74545 inset, 0 -5px 5px #d74545 inset, 5px 0 5px #d74545 inset, 0 5px 5px #d74545 inset;
+  }
+  .button.active {
+    color: #ffffff;
+    /* border: 2px solid#d74545;  */
+    background-color:#d74545;
+    box-shadow: -5px 0 5px #000000 inset, 0 -5px 5px #000000 inset, 5px 0 5px #000000 inset, 0 5px 5px #000000 inset;
+  }
