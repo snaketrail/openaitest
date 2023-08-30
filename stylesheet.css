@@ -152,35 +152,36 @@ body {
     margin-top: 25px;
     display: flex;
     min-height: 600px;
-    border: 2px solid #333; /* Add border to the container */
-    background-color: #f1f1f1; /* Set background color */
+    border: 2px solid #333; 
+    background-color: #f1f1f1; 
     border-top: none;
+    border-left: none;
   }
   
-  /* Style the content section */
+ 
   #nextContainer {
-    flex: 1; /* Occupy 80% of the available width */
-    padding: 20px; /* Add padding for spacing */
-    background-color: #ffffff; /* Set background color */
-    border-right: 2px solid #333; /* Add a right border */
+    flex: 1; 
+    padding: 20px; 
+    background-color: #ffffff;
+    border-right: 2px solid #333; 
   }
   
-  /* Style the item container */
+  
   #itemContainer {
     text-align: center;
   }
   
-  /* Style the buttons section */
+
   #button-container {
-    width: 20%; /* Fixed width for the button container */
+    width: 20%; 
     display: flex;
     flex-direction: column;
-    background-color: #333; /* Set background color */
+    background-color: #333; 
     padding: 10px;
-    order: 2; /* Change the order to appear on the right */
+    order: 2; 
   }
   
-  /* Style individual buttons */
+
   .button {
     display: flex;
     align-items: center;
@@ -189,8 +190,8 @@ body {
     color: white;
     font-size: 16px;
     transition: background-color 0.3s;
-    margin-bottom: 5px; /* Add margin between buttons */
-    flex-grow: 1; /* Make buttons fill the available height */
+    margin-bottom: 5px; 
+    flex-grow: 1; 
     border: #d74545 solid 1px;
   }
   .button:hover{
@@ -198,7 +199,19 @@ body {
   }
   .button.active {
     color: #ffffff;
-    /* border: 2px solid#d74545;  */
     background-color:#d74545;
     box-shadow: -5px 0 5px #000000 inset, 0 -5px 5px #000000 inset, 5px 0 5px #000000 inset, 0 5px 5px #000000 inset;
   }
+
+  #itemImage {
+    max-width: 100%;
+    max-height: 60%;
+}
+/* .flag-icon {
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+} */

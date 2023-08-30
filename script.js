@@ -9,11 +9,11 @@ window.addEventListener('DOMContentLoaded', () => {
       menu.classList.toggle('active');
       icon.textContent = menu.classList.contains('active') ? '✕' : iconText;
       
-      // Toggle the z-index of service-item
+
       if (menu.classList.contains('active')) {
         serviceItem.style.zIndex = '-1';
       } else {
-        serviceItem.style.zIndex = ''; // Reset to default value
+        serviceItem.style.zIndex = ''; 
       }
     });
   });
@@ -45,10 +45,10 @@ window.addEventListener('DOMContentLoaded', () => {
       var itemImage = document.getElementById('itemImage');
     
       var buttons = document.querySelectorAll('.button');
-      buttons.forEach(btn => btn.classList.remove('active')); // Remove active class from all buttons
-      button.classList.add('active'); // Add active class to the clicked button
+      buttons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active'); 
   
-      // Update content
+
       itemTitle.textContent = title;
       itemText.textContent = text;
       itemImage.src = imageUrl;
@@ -56,20 +56,42 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   
   function buttonHome1(){
-      changeContent("Website Design", "We create stunning and responsive websites.", "website-design.jpg", event.target);
+      changeContent("Website Design", "We create stunning and responsive websites.", "images/webs1.png", event.target);
   }
   function buttonHome2(){
-      changeContent("Copywriting", "Compelling content that captures your audience.", "copywriting.jpg", event.target);
+      changeContent("Copywriting", "Compelling content that captures your audience.", "images/articles.png", event.target);
   }
   function buttonHome3(){
-      changeContent("Graphic Design", "Eye-catching visuals to convey your message.", "graphic-design.jpg", event.target);
+      changeContent("Graphic Design", "Eye-catching visuals to convey your message.", "images/Davice.png", event.target);
   }
   function buttonHome4(){
-      changeContent("SEO Audit", "Boost your online presence with our SEO expertise.", "seo-audit.jpg", event.target);
+      changeContent("SEO Audit", "Boost your online presence with our SEO expertise.", "images/marketing.png", event.target);
   }
   function buttonHome5(){
-      changeContent("Virtual Assistance", "Outsource tasks and focus on what matters.", "virtual-assistance.jpg", event.target);
+      changeContent("Virtual Assistance", "Outsource tasks and focus on what matters.", "images/virtualassistant.png", event.target);
   }
   function buttonHome6(){
-      changeContent("Business Automation", "Streamline your processes for efficiency.", "business-automation.jpg", event.target);
+      changeContent("Business Automation", "Streamline your processes for efficiency.", "images/robot1.png", event.target);
   }
+
+
+
+// function translateToBulgarian() {
+
+// }
+
+// function translateToEnglish() {
+
+// }
+
+
+// var languageSwitch = document.getElementById('language-switch');
+
+
+// languageSwitch.addEventListener('click', function() {
+//   if () {
+//       translateToBulgarian();
+//   } else {
+//       translateToEnglish();
+//   }
+// });
