@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheet.css" rel="stylesheet">
+    <title>Contacts</title>
+</head>
+<body>
+    <nav>
+        <p class="logo" onclick="goToHome()">SimDim Marketing</p>
+        <ul class="menu">
+            <li><a href="index.html" class="active">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+        <a href="#" class="menu-toggle">
+            <div class="icon">☰</div>
+        </a>
+    </nav>
+    <div class="form-contact">
+        <form onsubmit="sendEmail(); reset(); return false">
+            <h3>Leave us a message</h3>
+          <input type="text" name="name" id="name" placeholder="Name" required="">
+          <input type="email" id="email" name="email" placeholder="Email" required="">
+          <textarea name="message" id="messageBox" placeholder="Message" required="" data-gramm="false" wt-ignore-input="true"></textarea>
+          <button type="submit" class="button">Send</button>
+        </form>
+      </div>
+      <script src="script.js"></script>
+      <script src="email.js"></script>
+      <script src="changeContent.js"></script>
+</body>
+</html>
