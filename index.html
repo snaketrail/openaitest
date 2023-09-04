@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav>
-        <p class="logo" onclick="goToHome()">SimDim Marketing</p>
+        <p class="logo">SimDim Marketing</p>
         <ul class="menu">
             <li><a href="index.html" class="active">Services</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
@@ -37,9 +37,35 @@
               <h2 id="itemTitle"></h2>
               <p id="itemText"></p>
               <img id="itemImage" src="images/SimDim.png" alt="logo">
+              <!-- when img is clicked, it will bring you to the relevant section on the portfolio page -->
           </div>
       </div>
   </div>
+  <footer>
+    <div class="footer-links">
+      <a id="privacy-policy-link" href="#">Privacy Policy</a>
+      <a id="tos-policy-link" href="#">ToS</a>
+      <a href="contact.html">Contacts</a>
+      <a href="about.html">About</a>
+    </div>
+    <div id="modal-overlay"></div>
+      
+    <div id="modal">
+      <div id="modal-content">
+        <h2>Privacy Policy</h2>
+      </div>
+    </div>
+
+    <div id="modal1-overlay"></div>
+    <div id="modal1">
+      <div id="modal1-content">
+        <h2>Terms of Service</h2>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      &copy; 2023 SimDim Fashion
+    </div>
+  </footer>
     <script src="script.js"></script>
     <script src="changeContent.js"></script>
 </body>
