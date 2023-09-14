@@ -74,3 +74,5 @@ function closeModal1() {
 
 tosPolicyLink.addEventListener('click', openModal1);
 modal1Overlay.addEventListener('click', closeModal1);
+
+

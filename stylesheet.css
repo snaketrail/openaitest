@@ -207,6 +207,76 @@ body {
     max-width: 100%;
     max-height: 60%;
 }
+
+/* Styles for Mobile */
+@media (max-width: 768px) {
+  #container {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column; /* Change the direction to stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    min-height: 600px;
+    border: 2px solid #333;
+    background-color: #f1f1f1;
+    border-top: none;
+    border-left: none;
+  }
+  .button.active1 {
+    color: #ffffff;
+    background-color:#d74545;
+    box-shadow: -5px 0 5px #000000 inset, 0 -5px 5px #000000 inset, 5px 0 5px #000000 inset, 0 5px 5px #000000 inset;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  #button-container {
+    width: 100%; /* Take up the entire width on small screens */
+    background-color: #333;
+    padding: 10px;
+    order: 1; /* Change the order to 1 to move it above #nextContainer */
+  }
+
+  #nextContainer {
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 2px solid #333;
+    width: 100%; /* Take up the entire width on small screens */
+    order: 2; /* Change the order to 2 to move it below #button-container */
+  }
+  
+  #itemContainer {
+    text-align: center;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+    border: #d74545 solid 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .button:hover {
+    box-shadow: -5px 0 5px #d74545 inset, 0 -5px 5px #d74545 inset, 5px 0 5px #d74545 inset, 0 5px 5px #d74545 inset;
+  }
+  
+  .button.active1 {
+    color: #ffffff;
+    background-color: #d74545;
+    box-shadow: -5px 0 5px #000000 inset, 0 -5px 5px #000000 inset, 5px 0 5px #000000 inset, 0 5px 5px #000000 inset;
+  }
+  
+  #itemImage {
+    max-width: 100%;
+    max-height: 60%;
+  }
+}
 /* .flag-icon {
   cursor: pointer;
   position: fixed;
