@@ -1,23 +1,37 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'path/to/PHPMailer/src/Exception.php';
+require 'path/to/PHPMailer/src/PHPMailer.php';
+require 'path/to/PHPMailer/src/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $message = $_POST["message"];
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
 
-  $to = "simdim.marketing@gmail.com"; 
-  $subject = "New Contact Form Submission";
-  $headers = "From: " . $email . "\r\n";
-  $headers .= "Reply-To: " . $email . "\r\n";
-  $headers .= "Content-type: text/html\r\n";
+    $mail = new PHPMailer(true);
 
-  $mailBody = "Name: " . $name . "<br>";
-  $mailBody .= "Email: " . $email . "<br>";
-  $mailBody .= "Message: " . $message;
+    try {
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = getenv('GMAIL_EMAIL');
+        $mail->Password = getenv('GMAIL_PASSWORD'); 
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
 
-  if (mail($to, $subject, $mailBody, $headers)) {
-    echo "Email sent successfully!";
-  } else {
-    echo "Failed to send email";
-  }
+        $mail->setFrom($email, $name);
+        $mail->addAddress('simdim.marketing@gmail.com'); 
+
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Submission';
+        $mail->Body = "Name: $name<br>Email: $email<br>Message: $message";
+
+        $mail->send();
+        echo 'Email sent successfully!';
+    } catch (Exception $e) {
+        echo 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
+    }
 }
-?>

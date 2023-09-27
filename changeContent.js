@@ -38,90 +38,90 @@ function buttonHome6(){
 
 
 
-// function translateToBulgarian() {
+// // function translateToBulgarian() {
 
-// }
+// // }
 
-// function translateToEnglish() {
+// // function translateToEnglish() {
 
-// }
-
-
-// var languageSwitch = document.getElementById('language-switch');
+// // }
 
 
-// languageSwitch.addEventListener('click', function() {
-//   if () {
-//       translateToBulgarian();
-//   } else {
-//       translateToEnglish();
+// // var languageSwitch = document.getElementById('language-switch');
+
+
+// // languageSwitch.addEventListener('click', function() {
+// //   if () {
+// //       translateToBulgarian();
+// //   } else {
+// //       translateToEnglish();
+// //   }
+// // });
+// function isMobileDevice() {
+//     return window.innerWidth <= 668; // You can adjust the width threshold as needed
 //   }
-// });
-function isMobileDevice() {
-    return window.innerWidth <= 668; // You can adjust the width threshold as needed
-  }
   
-  function deleteContentInDiv(divId) {
-    const targetDiv = document.getElementById(divId);
-    if (targetDiv) {
-      while (targetDiv.firstChild) {
-        targetDiv.removeChild(targetDiv.firstChild);
-      }
-    }
-  }
+//   function deleteContentInDiv(divId) {
+//     const targetDiv = document.getElementById(divId);
+//     if (targetDiv) {
+//       while (targetDiv.firstChild) {
+//         targetDiv.removeChild(targetDiv.firstChild);
+//       }
+//     }
+//   }
   
-  // Check if it's a mobile device and then call deleteContentInDiv
-  if (isMobileDevice()) {
-    // Call the function with the ID of the div you want to clear
-    deleteContentInDiv('button-container');
+//   // Check if it's a mobile device and then call deleteContentInDiv
+//   if (isMobileDevice()) {
+//     // Call the function with the ID of the div you want to clear
+//     deleteContentInDiv('button-container');
   
-    function createMobileButton() {
-      // Create a new button element
-      const button = document.createElement("div");
-      button.className = "button"; // Apply the required classes
-      button.textContent = "See Next Service"; // Set the button text
+//     function createMobileButton() {
+//       // Create a new button element
+//       const button = document.createElement("div");
+//       button.className = "button"; // Apply the required classes
+//       button.textContent = "See Next Service"; // Set the button text
     
-      // Append the button to the button container
-      const buttonContainer = document.getElementById("button-container");
-      buttonContainer.appendChild(button);
-    }
+//       // Append the button to the button container
+//       const buttonContainer = document.getElementById("button-container");
+//       buttonContainer.appendChild(button);
+//     }
     
-    // Call the function to create the mobile button
-    createMobileButton();
-  }
+//     // Call the function to create the mobile button
+//     createMobileButton();
+//   }
   
   
-  // Array of functions
-const functionArray = [
-    buttonHome1,
-    buttonHome2,
-    buttonHome3,
-    buttonHome4,
-    buttonHome5,
-    buttonHome6,
-  ];
+//   // Array of functions
+// const functionArray = [
+//     buttonHome1,
+//     buttonHome2,
+//     buttonHome3,
+//     buttonHome4,
+//     buttonHome5,
+//     buttonHome6,
+//   ];
   
-  // Variable to keep track of the current function index
-  let currentFunctionIndex = 0;
+//   // Variable to keep track of the current function index
+//   let currentFunctionIndex = 0;
   
-  // Function to handle button click
-  function handleButtonClick() {
-    // Get the current function from the array
-    const currentFunction = functionArray[currentFunctionIndex];
+//   // Function to handle button click
+//   function handleButtonClick() {
+//     // Get the current function from the array
+//     const currentFunction = functionArray[currentFunctionIndex];
   
-    // Check if the function exists and is a callable function
-    if (typeof currentFunction === "function") {
-      currentFunction();
-    }
+//     // Check if the function exists and is a callable function
+//     if (typeof currentFunction === "function") {
+//       currentFunction();
+//     }
   
-    // Increment the index and reset if it exceeds the array length
-    currentFunctionIndex++;
-    if (currentFunctionIndex >= functionArray.length) {
-      currentFunctionIndex = 0;
-    }
-  }
+//     // Increment the index and reset if it exceeds the array length
+//     currentFunctionIndex++;
+//     if (currentFunctionIndex >= functionArray.length) {
+//       currentFunctionIndex = 0;
+//     }
+//   }
   
-  // Add a click event listener to your button
-  const mobileButton = document.querySelector(".button");
-  mobileButton.addEventListener("click", handleButtonClick);
+//   // Add a click event listener to your button
+//   const mobileButton = document.querySelector(".button");
+//   mobileButton.addEventListener("click", handleButtonClick);
   
